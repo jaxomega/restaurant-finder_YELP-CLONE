@@ -55,10 +55,26 @@ app.get('/api/v1/restaurants/:id', async (req, res) => {
 }
 })
 
-
 //Create a restaurant
+app.post('/api/v1/restaurants', async (req, res) => {
+    console.log(req.body)
 
-
+    try {
+        const results = await ddb.query(
+            "INSERT INTO restaurants (name, location, price_range) values ($1, $2, $3) returning *"
+            [req.body.name, req.body.location, req.body.price_range]
+        )
+        console.log(results)
+        res.status(201).json({
+            status: 'success',
+            data: {
+                restaurant: results.row[0]
+            }
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
 
 //Update restaurants
 
