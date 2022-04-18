@@ -4,6 +4,7 @@ import Home from './routes/Home'
 import UpdatePage from './routes/UpdatePage'
 import RestaurantDetailPafe from './routes/RestaurantDetailPage'
 import { RestaurantContextProvider } from './context/RestaurantContext'
+
 const App = () => {
     return (
     <RestaurantContextProvider>
@@ -31,4 +32,5 @@ const App = () => {
     </RestaurantContextProvider>
     )
 }
+
 export default App;
