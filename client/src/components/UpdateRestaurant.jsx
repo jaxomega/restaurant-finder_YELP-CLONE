@@ -31,4 +31,30 @@ const UpdateRestaurant = (props) => {
         });
         history.push('/')
     };
+    retun (
+        <div>
+            <form action="">
+                <div className="form-group">
+                    <label htmlFor="name">Name</label>
+                    <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        id="name"
+                        className="form-control"
+                        type="text"
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="location">Location</label>
+                    <input
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        id="location"
+                        className="form-control"
+                        type="text"
+                    />
+                </div>
+            </form>
+        </div>
+    )
 }
