@@ -30,7 +30,7 @@ const App = () => {
             </Router>
         </div>
     </RestaurantContextProvider>
-    )
-}
+    );
+};
 
 export default App;
