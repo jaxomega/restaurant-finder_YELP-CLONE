@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, usseContext } from 'react'
 import RestaurantFinder from '../apis/RestaurantFinder'
-import { RestaurantsContext } from '../context/RestaurantContext'
+import { RestaurantsContext } from '../context/RestaurantsContext'
 import { useHistory } from 'react-router-dom'
 import StarRating from './StarRating'
 
