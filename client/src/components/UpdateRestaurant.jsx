@@ -53,8 +53,25 @@ const UpdateRestaurant = (props) => {
                         className="form-control"
                         type="text"
                     />
+               </div>
+                <div className="form-group">
+                    <label htmlFor="price_range">Price Range</label>
+                    <input
+                        value={priceRange}
+                        onChange={(e) => setPriceRange(e.target.value)}
+                        id="price_range"
+                        className="form-control"
+                        type="number"
+                    />
                 </div>
+                <button
+                    type="submit"
+                    onClick={handleSubmit}
+                    className="btn-primary"
+                >Submit</button>
             </form>
         </div>
-    )
-}
+    );
+};
+
+export default UpdateRestaurant;
