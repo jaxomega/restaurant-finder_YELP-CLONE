@@ -79,11 +79,44 @@ const RestaurantList = (props) => {
                                         className="btn-warning"
                                     >Update</button>
                                 </td>
+                                <td>
+                                    <button
+                                        onClick={(e) => handleDelete(e, restaurant.id)}
+                                        className="btn-danger"
+                                    >Delete</button>
+                                </td>
                             </tr>
-                        )
+                        );
                     })}
+                {/* <tr>
+                    <td>Popeys</td>
+                    <td>Arkansas</td>
+                    <td>$$</td>
+                    <td>Rating</td>
+                    <td>
+                        <button className="btn-warning">Update</button>
+                    </td>
+                    <td>
+                        <button className="btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Popeys</td>
+                    <td>Arkansas</td>
+                    <td>$$</td>
+                    <td>Rating</td>
+                    <td>
+                        <button className="btn-warning">Update</button>
+                    </td>
+                    <td>
+                        <button className="btn-danger">Delete</button>
+                    </td>
+                </tr */}
                 </tbody>
             </table>
         </div>
-    )
-}
+    );
+};
+
+export default RestaurantList;
