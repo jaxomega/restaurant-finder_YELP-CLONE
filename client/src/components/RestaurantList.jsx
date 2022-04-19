@@ -48,4 +48,42 @@ const RestaurantList = (props) => {
             </>
         );
     };
+    return (
+        <div className="list-group">
+            <table className="table-hover">
+                <thead>
+                    <tr className="primary">
+                        <th scope="col">Restaurant</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Price Range</th>
+                        <th scope="col">Ratings</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {restaurants &&
+                    restaurants.map((restaurant) => {
+                        return (
+                            <tr
+                                onClick={() => handleRestaurantSelect(restaurant.id)}
+                                key={restaurant.id}
+                            >
+                                <td>{restaurant.name}</td>
+                                <td>{restaurant.location}</td>
+                                <td>{"$".repeat(restaurant.price_range)}</td>
+                                <td>{renderRating(restaurant)}</td>
+                                <td>
+                                    <button
+                                        onClick={(e) => handleUpdate(e, restaurant.id)}
+                                        className="btn-warning"
+                                    >Update</button>
+                                </td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
+        </div>
+    )
 }
