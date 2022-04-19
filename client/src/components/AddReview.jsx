@@ -25,4 +25,24 @@ const AddReview = () => {
             history.push(location.pathname)
         } catch (err) {}
     };
+    return (
+        <div className="mb-2">
+            <form action="">
+                <div className="form-row">
+                    <div className="form-group col-8">
+                        <label htmlFor="name">Name</label>
+                        <input
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            id="name"
+                            placholder="name"
+                            type="text"
+                            className="form-control"
+                            />
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    )
 }

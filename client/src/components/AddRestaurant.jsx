@@ -22,7 +22,7 @@ const AddRestaurant = () => {
         }
     };
     return (
-        <div className="mb">
+        <div className="mb-4">
             <form action="">
                 <div className="form-row">
                     <div className="col">
