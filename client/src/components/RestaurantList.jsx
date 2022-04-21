@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, usseContext } from 'react'
+import React, { useContext, useEffect, useContext } from 'react'
 import RestaurantFinder from '../apis/RestaurantFinder'
-import { RestaurantsContext } from '../context/RestaurantsContext'
+import { RestaurantContext } from '../context/RestaurantsContext'
 import { useHistory } from 'react-router-dom'
 import StarRating from './StarRating'
 
 const RestaurantList = (props) => {
-    const { restaurants, setRestaurants } = useContext(RestaurantsContext)
+    const { restaurants, setRestaurants } = useContext(RestaurantContext)
     let history = useHistory();
     useEffect(() => {
         const fetchData = async () => {
